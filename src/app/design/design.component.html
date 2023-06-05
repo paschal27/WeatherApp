@@ -1,0 +1,34 @@
+<div class="mycontainer mt-5">
+    <div class="card mb-3" style="width: 540px; background-color: black; color: white;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{iconURL}}" class="img-fluid rounded-start" alt="" style="width: 5000px;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: left;">{{city}}</h5>
+              <p class="card-text"> Temperature: {{temperature}}°F </p>
+              <p class="card-text"> Feels Like: {{feelslike}} °F</p>
+              <p class="card-text"> Pressure: {{pressure}} °F</p>
+              <p class="card-text"> Humidity: {{humidity}} °F</p>
+              <p class="card-text">Summary: {{summary}} </p>
+              <p class="card-text" style="color: gray; text-align: right;"><small class="text">country: {{country}}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="outsideCon">
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" (change)="onSelected($event)">
+            <option aria-placeholder="chnage city"></option>
+            <option value="" disabled selected>choose a country</option>
+            <option value="US">USA</option>
+            <option value="NG">Nigeria</option>
+            <option value="GB">Great Britain</option>
+            <option value="KR">South Korea</option>
+          </select>
+            <div class="input-group mb-3 text-center">
+                <input type="text" class="form-control" [(ngModel)]="input" style="max-width: 200px;" placeholder="Enter City" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" style="color: white; background-color: black;" type="button" id="button-addon2" (click)="getweather('onClick')">APPLY</button>
+            </div>
+      </div>
+</div>

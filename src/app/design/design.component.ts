@@ -24,6 +24,7 @@ export class DesignComponent implements OnInit {
 
   ngOnInit(): void {
     this.getweather()
+    
   }
 
   getweather(clicked?: string) {

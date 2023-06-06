@@ -57,6 +57,18 @@ export class DesignComponent implements OnInit {
 
   onSelected(event: any) {
     this.country = event.target.value
+    this.getweather()
+  }
+
+  changeUnits() {
+    if (this.units == 'imperial'){
+      this.units = 'metric' 
+    }else {
+      this.units = 'imperial'
+  }
+
+  this.getweather();
+
   }
 
 }
